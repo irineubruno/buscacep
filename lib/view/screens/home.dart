@@ -10,6 +10,22 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Consulta do CEP"),
+      ),
+      body: Container(
+        child: Column(
+          children:[
+            TextField(
+              keyboardType: TextInputType.number,
+            ),
+            TextButton.icon(onPressed: (){},
+                icon: Icon(Icons.add),
+                label: Text('Adicionar'))
+          ],
+        ),
+      ),
+    );
   }
 }
